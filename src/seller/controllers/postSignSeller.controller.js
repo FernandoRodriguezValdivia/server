@@ -1,6 +1,7 @@
 const {loginSeller} = require('../services')
 
 const postSignSeller = async (req,res)=>{
+
 	try {
 		const {body} = req
 		const data = await loginSeller(body)

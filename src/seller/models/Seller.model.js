@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
+  subastaid: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Subasta'
+  }],
   fullName: {
     type: String,
   },

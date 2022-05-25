@@ -12,7 +12,7 @@ const loginSeller = async ({ ...userData }) => {
 	const isVerified = await verifiedPass(userData.password, document.password)
 	if(isVerified){
 			const token = jwt.sign({ id: document._id }, "apple")
-			const data = {token, mail: document.mail, type: 'user'}
+			const data = {token, name: document.fullName, type: 'seller', id: document._id}
 			return data
 	}else{
 		throw new Error('data incorrect');

@@ -5,6 +5,10 @@ const userSchema = new Schema({
   fullName: {
     type: String,
   },
+  subastas:[{
+    type: Schema.Types.ObjectId,
+		ref: 'Subasta' 
+  }],
   dni:{
     type: String,
   },
